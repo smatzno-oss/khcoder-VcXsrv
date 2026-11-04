@@ -1,3 +1,13 @@
-KHCoder/works
-db_data
-_do_init.sh
+# OS 一時ファイル
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+
+# 解析出力・作業データ
+KHCoder/Workfiles/
+KHCoder/*.pdf
+KHCoder/khcoderstart.txt
+*.csv
+*.xlsx
+*.docx
+db_data/

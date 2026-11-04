@@ -30,6 +30,7 @@ RUN apt-get install -y x11-apps \
       libextutils-helpers-perl         \
       libextutils-installpaths-perl    \
       libfile-bom-perl                 \
+      libfile-copy-recursive-perl      \
       libgraphics-colorutils-perl      \
       libgsl-dev                       \
       libjcode-perl                    \
@@ -88,6 +89,8 @@ RUN apt-get install -y x11-apps \
       r-cran-tm                        \
       r-cran-vegan                     \
       r-cran-wordcloud                 \
+      imagemagick \
+      libimage-magick-perl \
       vim-nox \
     && apt-get clean \
     && rm -rf /var/cache/apt/archives/* \

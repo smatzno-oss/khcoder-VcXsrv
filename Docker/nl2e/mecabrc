@@ -5,7 +5,7 @@
 ;
 dicdir = /var/lib/mecab/dic/debian
 
-; userdic = /home/foo/bar/user.dic
+userdic = /KHCoder/khcoder/medicaldics/comejisyo_kh.dic
 
 ; output-format-type = wakati
 ; input-buffer-size = 8192
