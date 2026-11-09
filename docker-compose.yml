@@ -1,14 +1,21 @@
 # version: '3.5'
 services:
   nl2e:
+    build: ./Docker/nl2e
     image: 'my-khcoder:latest'
     environment:
-      DISPLAY: host.docker.internal:0
-    depends_on:
-      - mysql
+      - DISPLAY=${DISPLAY:-:0}
+      - GDK_SCALE=1
+      - GDK_DPI_SCALE=1
+      - QT_AUTO_SCREEN_SCALE_FACTOR=0
+      - TK_SILENCE_DEPRECATION=1
+      - WAYLAND_DISPLAY=${WAYLAND_DISPLAY}
+      - XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR}
+      - PULSE_SERVER=${PULSE_SERVER}
     volumes:
-      - './KHCoder:/KHCoder'
-      - '$HOME/.Xauthority:/root/.Xauthority'
+      - ${PWD}/KHCoder:/KHCoder
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
     networks:
       nl2e_net:
         ipv4_address: '171.20.0.2'
@@ -35,5 +42,5 @@ networks:
       config:
         - subnet: 171.20.0.0/24
 volumes:
-    KHCoder:
-    db_data:
+   KHCoder:
+   db_data:

@@ -11,3 +11,5 @@ KHCoder/khcoderstart.txt
 *.xlsx
 *.docx
 db_data/
+db_data/
+*.log
